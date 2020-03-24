@@ -1,8 +1,6 @@
 (function () {
     const title = document.getElementById('title')
-    const container = document.getElementById('container')
-    const display = document.getElementById('display')
-    const init = document.getElementById('start')
+    const outside = document.getElementById('outsideModal')
     const leftUpperCorner = document.getElementById('first_cuadre')
     const upperMedium = document.getElementById('second_cuadre')
     const RightUpperCorner = document.getElementById('three_cuadre')
@@ -15,13 +13,9 @@
     let valorX = true
 
     const winningCombinations = [[0, 1, 2], [3, 4, 5], [6, 7, 8]]
-
-
     const arrayX = [];
     const arrayO = [];
-
-    console.log(arrayX)
-    console.log(arrayO)
+  
 
     function click(element) {
         element.addEventListener('click', function () {
@@ -29,7 +23,10 @@
             const index = parseInt(indexString)
             if (arrayX.includes(index)) {
                 return; // we stop the script as nothing should be added to it
+            } else if(arrayO.includes(index)) {
+                return; // we stop the script as nothing should be added to it
             }
+            
             if (valorX) {
                 title.innerHTML = `Turno del jugador O`
                 event.target.innerHTML = `<img class="image_edit" src="./image/cross.png" alt="">`
@@ -62,14 +59,12 @@
     function validator(selectedIndexes) {
         for (let i = 0; i < winningCombinations.length; i++) {
             const winningCombination = winningCombinations[i];
-            if(winningCombination === selectedIndexes) {
-                console.log('Ganaste')
-            } else {
-                console.log('Perdiste')
-            }
-            console.log('Combinacion ganadora', winningCombination)
-            console.log('Combinacion seleccionada', selectedIndexes)
+
+            if (selectedIndexes.includes(winningCombination[0]) && selectedIndexes.includes(winningCombination[1]) && selectedIndexes.includes(winningCombination[2])) {
+                outsideModal.style.display = "flex"
+            } 
         }
     }
+
 
 })()

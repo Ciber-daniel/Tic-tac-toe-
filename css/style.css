@@ -61,6 +61,7 @@ body {
 }
 
 #start {
+    justify-content: center;
     display: flex;
     text-align: center;
     margin-left:45.5% ;
@@ -72,6 +73,47 @@ body {
     border: 1px solid black;
     text-decoration: none;
     font-size: 20px;
+    color: black;
+}
+
+.modal {
+    background-color: rgba(0, 0, 0, 0.212);
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    position: fixed;
+    top: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    display: flex;
+    background-color: rgba(253, 253, 253, 0.877);
+    width: 70%;
+    height: 70%;
+    justify-content: center;
+    font-size: 10px;
+    animation-duration: 1s;
+    animation-delay: 0.5s;
+    font-size: 80px;
+    flex-direction: column;
+}
+
+.image img {
+    width: 200px;
+    height: 150px;
+
+}
+
+.btn {
+    font-size: 30px;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #title {
@@ -88,4 +130,29 @@ body {
     height: 180px;
     width: 180px;
     margin-left: 10px;
+}
+
+.letter {
+    display: flex;
+    flex-direction: row;
+}
+
+.letter img {
+    width: 150px;
+    height: 100px;
+    margin-top: 120px;
+    margin-left: 10px;
+}
+
+.button {
+   font-size: 20px;
+   display: flex;
+   justify-content: center;
+   text-align: center;
+   background-color: rgb(135, 76, 190);
+   padding: 15px;
+   font-weight: bold;
+   text-decoration: none;
+   border: 1px solid black;
+   color:black ;
 }
