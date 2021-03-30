@@ -1,76 +1,47 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
-    <link rel="stylesheet" href="./css/style.css">
-    <title>Document</title>
-</head>
-<body>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Tic-tac-toe</title>
+  </head>
+  <body>
     <div class="modal" id="outsideModal">
-        .
-        <div class="content">         
-               
-              <div class="letter">
-                <h2 class="animated flipInY">Ganaste!</h2> 
-                 <img class="animated flipInY" src="./image/pngocean.com.png" alt="">
-               
-              </div>
-              <div class="btn">  
-                   <a href="" class="button"> Volver a jugar </a>
-                </div>
+      <div class="content">
+        <div class="letter">
+          <h2 class="animated flipInY">Ganaste!</h2>
+          <img class="animated flipInY" src="./image/pngocean.com.png" alt="" />
         </div>
-            
+        <div class="btn">
+          <a href="" class="button"> Volver a jugar </a>
+        </div>
+      </div>
     </div>
     <div id="container">
-            <div class="title_container">
-                <h2 id="title">Tic Tac Toe</h2>
-            </div>
-            <div class="first_line">
-            <div data-index="0" id="first_cuadre">
-            </div>
-            <div data-index="1" id="second_cuadre">
-
-            </div>
-            <div data-index="2" id="three_cuadre">
-
-            </div>
-        </div>
-        <div class="second_line">
-            <div data-index="3" id="fourth_cuadre">
-
-            </div>
-            <div data-index="4" id="fifth_cuadre"> 
-
-            </div>
-            <div data-index="5" id="sixth_cuadre">
-            </div> 
-        </div>
-        <div class="three_line">
-            <div data-index="6" id="seventh_cuadre">
-
-            </div>
-            <div data-index="7" id="eighth_cuadre">
-
-            </div>
-            <div data-index="8" id="nineth_cuadre">
-
-            </div> 
-         </div>
-       
-        </div>
-        <a href="" id="start"> Reiniciar </a>
-
+      <div class="title_container">
+        <h2 id="title">Tic Tac Toe</h2>
+      </div>
+      <div class="first_line">
+        <div data-index="0" class="cuadre" id="first_cuadre"></div>
+        <div data-index="1" class="cuadre" id="second_cuadre"></div>
+        <div data-index="2" class="cuadre" id="three_cuadre"></div>
+      </div>
+      <div class="second_line">
+        <div data-index="3" class="cuadre" id="fourth_cuadre"></div>
+        <div data-index="4" class="cuadre" id="fifth_cuadre"></div>
+        <div data-index="5" class="cuadre" id="sixth_cuadre"></div>
+      </div>
+      <div class="three_line">
+        <div data-index="6" class="cuadre" id="seventh_cuadre"></div>
+        <div data-index="7" class="cuadre" id="eighth_cuadre"></div>
+        <div data-index="8" class="cuadre" id="nineth_cuadre"></div>
+      </div>
+      <button class="button" id="restart">Reiniciar</button>
     </div>
+
     <script src="./script/script.js"></script>
-</body>
+  </body>
 </html>
-<!-- 
-// if( valorX) {
-    //     element.innerHTML = `<img class="image_edit" src="./image/cross.png" alt=""`
-    //     title.innerHTML= `Turno del jugador X` 
-    //   valorX= false;   
-    // } else if (valorX == false) {
-    //     title.innerHTML =`Turno del jugador O`
-    //     element.innerHTML = `<img class="image_edit" src="./image/circle.png" alt="">`
-    //     valorX=true
-    // } -->
